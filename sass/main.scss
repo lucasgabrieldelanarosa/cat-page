@@ -1,0 +1,83 @@
+@use 'variables';
+@use 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, variables.$bg-color-1, variables.$bg-color-2), 
+    url('../imgs/city.png');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.header{
+    width: variables.$container-width;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    padding: 0 3%;
+    justify-content: space-between;
+
+    &-brand{
+        font-size: 3vw;
+        font-family: variables.$brand-font;
+        color: variables.$brand-color;
+    }
+    &-nav{
+        height: 100%;
+        width: 50%;
+        font-size: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &-btn{
+        color: variables.$nav-btns-color;
+        font-family: variables.$text-font;
+        }
+        &-btn:hover{
+            color: variables.$nav-btns-color-hover;
+        }
+    }
+}
+
+.main{
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    &-article{
+        width: 60%;
+        padding: 3%;
+
+        div{
+            background-color: variables.$bg-color-3;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5%;
+            font-family: variables.$text-color;
+
+            h1{
+                font-size: 3vw;
+                color: variables.$text-title-color;
+            }
+            p{
+                font-size: 2vw;
+                color: variables.$text-color;
+            }
+        }
+    }
+    img{
+        height: 100%;
+        width: 50%;
+    }
+}
