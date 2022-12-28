@@ -25,6 +25,11 @@ body {
   font-family: "Sevillana", cursive;
   color: rgb(131, 36, 115);
 }
+@media (max-width: 800px) {
+  .header-brand {
+    font-size: 10vw;
+  }
+}
 .header-nav {
   height: 100%;
   width: 50%;
@@ -39,6 +44,19 @@ body {
 }
 .header-nav-btn:hover {
   color: rgb(202, 27, 173);
+}
+@media (max-width: 800px) {
+  .header-nav {
+    font-size: 5vw;
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    padding: 1%;
+    height: auto;
+  }
 }
 
 .main {
@@ -64,13 +82,39 @@ body {
   font-size: 3vw;
   color: rgb(24, 124, 206);
 }
+@media (max-width: 800px) {
+  .main-article div h1 {
+    font-size: 8vw;
+  }
+}
 .main-article div p {
   font-size: 2vw;
   color: rgb(87, 155, 211);
 }
+@media (max-width: 800px) {
+  .main-article div p {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 800px) {
+  .main-article {
+    width: 100%;
+  }
+}
 .main img {
   height: 100%;
   width: 50%;
+}
+@media (max-width: 800px) {
+  .main img {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .main {
+    height: 100%;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

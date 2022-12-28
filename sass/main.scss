@@ -1,83 +1,127 @@
-@use 'variables';
-@use 'mixins';
+@use 'index';
 
 @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(to right, variables.$bg-color-1, variables.$bg-color-2), 
-    url('../imgs/city.png');
+body {
+    background-image: linear-gradient(to right, index.$bg-color-1, index.$bg-color-2),
+        url('../imgs/city.png');
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
 }
 
-.header{
-    width: variables.$container-width;
+.header {
+    width: index.$container-width;
     height: 20%;
     display: flex;
     align-items: center;
     padding: 0 3%;
     justify-content: space-between;
 
-    &-brand{
+    &-brand {
         font-size: 3vw;
-        font-family: variables.$brand-font;
-        color: variables.$brand-color;
+        font-family: index.$brand-font;
+        color: index.$brand-color;
+
+        @media (max-width: index.$width-cell-size) {
+            font-size: 10vw;
+        }
+
     }
-    &-nav{
+
+    &-nav {
         height: 100%;
         width: 50%;
         font-size: 2vw;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        &-btn{
-        color: variables.$nav-btns-color;
-        font-family: variables.$text-font;
+
+        &-btn {
+            color: index.$nav-btns-color;
+            font-family: index.$text-font;
+
         }
-        &-btn:hover{
-            color: variables.$nav-btns-color-hover;
+
+        &-btn:hover {
+            color: index.$nav-btns-color-hover;
         }
+
+        @media (max-width: index.$width-cell-size) {
+            font-size: 5vw;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: index.$width-cell-size) {
+        flex-direction: column;
+        padding: 1%;
+        height: auto;
     }
 }
 
-.main{
+.main {
     height: 80%;
     display: flex;
     justify-content: space-between;
 
-    &-article{
+    &-article {
         width: 60%;
         padding: 3%;
 
-        div{
-            background-color: variables.$bg-color-3;
+        div {
+            background-color: index.$bg-color-3;
             border-radius: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 5%;
-            font-family: variables.$text-color;
+            font-family: index.$text-color;
 
-            h1{
+            h1 {
                 font-size: 3vw;
-                color: variables.$text-title-color;
+                color: index.$text-title-color;
+
+
+                @media (max-width: index.$width-cell-size) {
+                    font-size: 8vw;
+                }
             }
-            p{
+
+            p {
                 font-size: 2vw;
-                color: variables.$text-color;
+                color: index.$text-color;
+
+
+                @media (max-width: index.$width-cell-size) {
+                    font-size: 5vw;
+                }
             }
         }
+
+        @media (max-width: index.$width-cell-size) {
+            width: 100%;
+        }
     }
-    img{
+
+    img {
         height: 100%;
         width: 50%;
+
+        @media (max-width: index.$width-cell-size) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: index.$width-cell-size) {
+        height: 100%;
+        flex-direction: column;
     }
 }
